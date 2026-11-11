@@ -3,61 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shamine Global LLP | Vasai-Virar's Premium Developer</title>
+    <title>Shamine Global LLP | Premium Developers in Vasai-Virar</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
-        header { background: #1a1a1a; color: #d4af37; padding: 1.5rem 0; text-align: center; }
-        header h1 { margin: 0; font-size: 2.5rem; letter-spacing: 2px; }
-        header p { margin: 5px 0 0 0; color: #fff; font-size: 1.1rem; }
-        section { padding: 40px 20px; max-width: 900px; margin: auto; text-align: center; }
-        .bg-light { background: #f4f4f4; }
-        h2 { color: #d4af37; font-size: 2rem; margin-bottom: 20px; }
-        .services-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 30px; }
-        .service-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); flex: 1 1 250px; }
-        .service-card h3 { color: #1a1a1a; margin-top: 0; }
-        footer { background: #1a1a1a; color: #fff; text-align: center; padding: 30px 20px; margin-top: 40px; }
-        .contact-btn { display: inline-block; background: #d4af37; color: #1a1a1a; padding: 12px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; margin-top: 20px; font-size: 1.1rem; }
-        .contact-btn:hover { background: #c19b2e; }
+        :root {
+            --primary-gold: #D4AF37;
+            --dark-bg: #121212;
+            --darker-bg: #0a0a0a;
+            --light-text: #f4f4f4;
+            --gray-text: #a0a0a0;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; background-color: var(--dark-bg); color: var(--light-text); line-height: 1.6; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 700; }
+
+        /* Navbar */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background-color: rgba(10, 10, 10, 0.95); position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid rgba(212, 175, 55, 0.2); }
+        .logo { font-size: 1.5rem; color: var(--primary-gold); text-transform: uppercase; letter-spacing: 2px; font-weight: 700; }
+        .logo span { color: var(--light-text); font-family: 'Montserrat', sans-serif; font-weight: 300; font-size: 1rem; display: block; letter-spacing: 1px; }
+        .nav-links a { color: var(--light-text); text-decoration: none; margin-left: 30px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--primary-gold); }
+        .contact-btn-nav { border: 1px solid var(--primary-gold); padding: 8px 20px; border-radius: 4px; }
+
+        /* Hero Section */
+        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 20px; background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.9)), url('https://images.unsplash.com/photo-1541881451239-0158fb713a29?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat; }
+        .hero h1 { font-size: 3.5rem; color: var(--primary-gold); margin-bottom: 20px; letter-spacing: 2px; }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin-bottom: 40px; color: #ddd; }
+        .btn-main { background-color: var(--primary-gold); color: var(--darker-bg); padding: 15px 40px; text-decoration: none; font-weight: 600; font-size: 1.1rem; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s; }
+        .btn-main:hover { background-color: #fff; box-shadow: 0 0 20px rgba(212, 175, 55, 0.4); }
+
+        /* Sections */
+        .section-padding { padding: 100px 5%; }
+        .bg-darker { background-color: var(--darker-bg); }
+        .section-title { font-size: 2.5rem; color: var(--primary-gold); margin-bottom: 15px; text-align: center; }
+        .section-subtitle { font-size: 1.1rem; color: var(--gray-text); margin-bottom: 60px; max-width: 800px; margin-left: auto; margin-right: auto; text-align: center; }
+
+        /* JV Grid */
+        .jv-grid { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+        .jv-card { background: #1a1a1a; padding: 40px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); flex: 1 1 300px; max-width: 400px; text-align: center; transition: transform 0.3s, border-color 0.3s; }
+        .jv-card:hover { transform: translateY(-10px); border-color: var(--primary-gold); }
+        .jv-card i { font-size: 3rem; color: var(--primary-gold); margin-bottom: 20px; }
+        .jv-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
+        .jv-card p { color: var(--gray-text); font-size: 0.95rem; }
+
+        /* Services Grid */
+        .expertise-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .service-box { padding: 30px; background: linear-gradient(145deg, #181818, #121212); border-left: 3px solid var(--primary-gold); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .service-box h4 { font-family: 'Montserrat', sans-serif; font-size: 1.2rem; margin-bottom: 15px; color: #fff; }
+        .service-box p { color: var(--gray-text); font-size: 0.9rem; }
+
+        /* Portfolio Highlight */
+        .project-highlight { display: flex; align-items: center; background: #1a1a1a; border-radius: 8px; overflow: hidden; border: 1px solid rgba(212, 175, 55, 0.2); }
+        .project-img { flex: 1 1 50%; min-height: 400px; background: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80') center/cover; }
+        .project-info { flex: 1 1 50%; padding: 60px; }
+        .project-info h3 { font-size: 2rem; color: var(--primary-gold); margin-bottom: 10px; }
+        .tag { display: inline-block; background: rgba(212, 175, 55, 0.1); color: var(--primary-gold); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; margin-bottom: 20px; font-weight: 600; }
+
+        /* Footer */
+        footer { background-color: #050505; padding: 80px 5% 30px; border-top: 1px solid rgba(255,255,255,0.1); }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 50px; }
+        .footer-col h4 { color: var(--primary-gold); font-family: 'Montserrat', sans-serif; margin-bottom: 20px; font-size: 1.2rem; }
+        .footer-col p, .footer-col a { color: var(--gray-text); text-decoration: none; display: block; margin-bottom: 10px; font-size: 0.95rem; }
+        .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.05); color: #555; font-size: 0.8rem; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .nav-links { display: none; }
+            .project-highlight { flex-direction: column; }
+            .project-img { min-height: 250px; width: 100%; }
+            .project-info { padding: 30px; }
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>SHAMINE GLOBAL LLP</h1>
-        <p>From Foundation to Finish | Developers & Civil Contractors</p>
-    </header>
+    <nav>
+        <div class="logo">SHAMINE GLOBAL<span>LLP | Developers & Builders</span></div>
+        <div class="nav-links">
+            <a href="#jv">Joint Ventures</a>
+            <a href="#expertise">Services</a>
+            <a href="#portfolio">Projects</a>
+            <a href="tel:+917021160832" class="contact-btn-nav">Call Now</a>
+        </div>
+    </nav>
 
-    <section>
-        <h2>Building Vasai-Virar's Future</h2>
-        <p>Incorporated in May 2025, Shamine Global LLP (LLPIN: ACO-0815) is a premier civil construction and real estate development firm led by Samuel Gonsalves and Suresh Gonsalves. Based in Sandor, Vasai, we specialize in high-quality multi-story developments, industrial RCC frameworks, and lucrative joint venture projects across the Palghar region.</p>
-        <a href="tel:+917021160832" class="contact-btn">Call Us for a Site Visit</a>
+    <section class="hero">
+        <h1>Transforming the Skyline<br>of Vasai-Virar</h1>
+        <p>Premium real estate developers and heavy civil contractors specializing in multi-story residential structures and lucrative land joint ventures.</p>
+        <a href="tel:+917021160832" class="btn-main">Partner With Us</a>
     </section>
 
-    <section class="bg-light">
-        <h2>Our Expertise</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>🤝 60/40 Joint Development</h3>
-                <p>Own a 5+ guntha plot? You supply the land, we fund and build a premium multi-story building. You keep 40% of the finished asset without spending a single rupee on construction.</p>
+    <section id="jv" class="section-padding bg-darker">
+        <h2 class="section-title">The 60/40 Landowner Advantage</h2>
+        <p class="section-subtitle">Turn your empty plot (minimum 5 gunthas) into a multi-story generational asset. We handle the heavy lifting; you reap the rewards.</p>
+        <div class="jv-grid">
+            <div class="jv-card">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <h3>1. You Provide the Land</h3>
+                <p>If you own a clear-title plot of 5 gunthas or more in the Vasai, Virar, or Palghar region, you bring the canvas.</p>
             </div>
-            <div class="service-card">
-                <h3>🏗️ Heavy Civil & RCC Contracting</h3>
-                <p>From factory shells in Haloli to complex residential frameworks, we deliver unbreakable foundations and structural integrity that lasts generations.</p>
+            <div class="jv-card">
+                <i class="fa-solid fa-helmet-safety"></i>
+                <h3>2. We Build It (100% Cost)</h3>
+                <p>Shamine Global covers 100% of capital, architectural planning, legal approvals, material, and heavy RCC construction.</p>
             </div>
-            <div class="service-card">
-                <h3>🏢 Multi-Story Residential</h3>
-                <p>Turnkey execution of luxury bungalows, commercial hubs, and multi-family apartments optimized for modern living and maximum rental yield.</p>
+            <div class="jv-card">
+                <i class="fa-solid fa-building-user"></i>
+                <h3>3. You Keep 40%</h3>
+                <p>Upon completion, you receive 40% of the premium finished building to live in, rent out, or sell for maximum ROI.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="expertise" class="section-padding">
+        <h2 class="section-title">Core Expertise</h2>
+        <p class="section-subtitle">Engineered for structural integrity. Designed for luxury.</p>
+        <div class="expertise-grid">
+            <div class="service-box">
+                <h4>🏢 Multi-Story Residential</h4>
+                <p>End-to-end development of premium apartments designed to elevate the standard of living and generate high rental yields.</p>
+            </div>
+            <div class="service-box">
+                <h4>🏗️ Heavy RCC & Civil</h4>
+                <p>Executing unbreakable foundations, complex frameworks, and industrial shell construction across Palghar district.</p>
+            </div>
+            <div class="service-box">
+                <h4>🏡 Luxury Bungalow Redevelopment</h4>
+                <p>Modernizing traditional living with bespoke 3 BHK and 4 BHK bungalow designs featuring South-facing spatial alignments.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section-padding bg-darker">
+        <h2 class="section-title">Proven Execution</h2>
+        <p class="section-subtitle">We don't just draft blueprints; we deliver landmarks.</p>
+        <div class="project-highlight">
+            <div class="project-img"></div>
+            <div class="project-info">
+                <span class="tag">Successfully Delivered</span>
+                <h3>Sahara Regency</h3>
+                <p style="color: var(--gray-text); margin-bottom: 20px;">A towering testament to our construction capability. Sahara Regency is a premium 7-story mixed-use development built from the ground up in the Vasai-Virar region.</p>
+                <p style="color: var(--gray-text); margin-bottom: 30px;">Featuring robust structural engineering and modern residential amenities, this project highlights exactly what we can achieve when developing premium land parcels.</p>
+                <a href="https://instagram.com/shamine_global" target="_blank" style="color: var(--primary-gold); text-decoration: none; font-weight: 600; border-bottom: 1px solid var(--primary-gold); padding-bottom: 2px;">View on Instagram <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
 
     <footer>
-        <h2>Contact Us</h2>
-        <p><strong>Partners:</strong> Samuel Gonsalves & Suresh Gonsalves</p>
-        <p><strong>Phone:</strong> +91 70211 60832</p>
-        <p><strong>Registered Office:</strong> H No 2021, Kanodi Rd, Papdi, Vasai Sandor, Maharashtra, India - 401201</p>
-        <p style="margin-top: 20px; font-size: 0.9rem; color: #888;">© 2026 Shamine Global LLP. All Rights Reserved.</p>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Shamine Global LLP</h4>
+                <p>Vasai-Virar's premier developer focused on structural excellence and high-yield joint ventures.</p>
+                <p>LLPIN: ACO-0815</p>
+            </div>
+            <div class="footer-col">
+                <h4>Leadership</h4>
+                <p>Samuel Gonsalves</p>
+                <p>Suresh Gonsalves</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <a href="tel:+917021160832"><i class="fa-solid fa-phone"></i> +91 70211 60832</a>
+                <p style="margin-top: 10px;"><i class="fa-solid fa-location-dot"></i> H No 2021, Kanodi Rd, Papdi,<br>Vasai Sandor, Maharashtra - 401201</p>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 Shamine Global LLP. All Rights Reserved.</div>
     </footer>
-
 </body>
 </html>
