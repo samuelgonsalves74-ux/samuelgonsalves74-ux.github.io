@@ -635,120 +635,86 @@
         </div>
     </section>
 <!-- Rental Property Yield Calculator -->
-    <section id="rental-calculator" class="section-padding" style="padding: 65px 5%;">
-        <div style="max-width: 540px; margin: 0 auto; background: var(--card-bg); border: 1px solid rgba(212, 175, 55, 0.35); border-radius: 10px; padding: 28px 24px; box-shadow: 0 12px 30px rgba(0,0,0,0.45);">
-            <span class="tag tag-done" style="margin-bottom: 10px;">Investor Quick Check</span>
-            <h3 style="color: var(--primary-gold); font-size: 1.55rem; margin-bottom: 6px;">Rental Property Yield Calculator</h3>
-            <p style="color: var(--gray-text); font-size: 0.88rem; margin-bottom: 20px;">
-                Gross Rental Yield (%) = (Annual Rent &divide; Total Property Value) &times; 100
-            </p>
+<section id="rental-calculator" class="section-padding" style="padding: 65px 5%;">
+    <div style="max-width: 540px; margin: 0 auto; background: var(--card-bg); border: 1px solid rgba(212, 175, 55, 0.35); border-radius: 10px; padding: 28px 24px; box-shadow: 0 12px 30px rgba(0,0,0,0.45);">
+        <span class="tag tag-done" style="margin-bottom: 10px;">Investor Quick Check</span>
+        <h3 style="color: var(--primary-gold); font-size: 1.55rem; margin-bottom: 6px;">Rental Property Yield Calculator</h3>
+        <p style="color: var(--gray-text); font-size: 0.88rem; margin-bottom: 20px;">
+            Gross Rental Yield (%) = (Annual Rent &divide; Total Property Value) &times; 100
+        </p>
 
-            <div style="display: flex; flex-direction: column; gap: 14px;">
-                <div>
-                    <label for="monthlyRentInput" style="display: block; font-size: 0.82rem; color: #dcdcdc; margin-bottom: 6px; font-weight: 600;">Monthly Rent (&#8377;)</label>
-                    <input type="number" id="monthlyRentInput" placeholder="e.g. 50000" min="0" step="any" style="width: 100%; padding: 11px 14px; border-radius: 5px; border: 1px solid rgba(255,255,255,0.18); background: #101010; color: #fff; font-family: 'Montserrat', sans-serif; font-size: 0.95rem;">
-                </div>
-
-                <div>
-                    <label for="propertyValueInput" style="display: block; font-size: 0.82rem; color: #dcdcdc; margin-bottom: 6px; font-weight: 600;">Total Property Value (&#8377;)</label>
-                    <input type="number" id="propertyValueInput" placeholder="e.g. 13000000" min="0" step="any" style="width: 100%; padding: 11px 14px; border-radius: 5px; border: 1px solid rgba(255,255,255,0.18); background: #101010; color: #fff; font-family: 'Montserrat', sans-serif; font-size: 0.95rem;">
-                </div>
-
-                <button type="button" id="calcYieldBtn" class="btn-main" style="width: 100%; justify-content: center; border: none; cursor: pointer; margin-top: 4px;">
-                    <i class="fa-solid fa-calculator"></i> Calculate
-                </button>
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+            <div>
+                <label for="monthlyRentInput" style="display: block; font-size: 0.82rem; color: #dcdcdc; margin-bottom: 6px; font-weight: 600;">Monthly Rent (&#8377;)</label>
+                <input type="number" id="monthlyRentInput" placeholder="e.g. 50000" min="0" step="any" style="width: 100%; padding: 11px 14px; border-radius: 5px; border: 1px solid rgba(255,255,255,0.18); background: #101010; color: #fff; font-family: 'Montserrat', sans-serif; font-size: 0.95rem;">
             </div>
 
-            <div id="yieldResultBox" style="display: none; margin-top: 20px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.9rem;">
-                <div id="yieldBadge" style="font-weight: 700; font-size: 1rem; margin-bottom: 10px;"></div>
-                <p id="yieldMainLine" style="color: #fff; font-size: 1.15rem; font-weight: 700; margin-bottom: 8px;"></p>
-                <p id="yieldStep1" style="color: var(--gray-text); font-size: 0.84rem; margin-bottom: 4px;"></p>
-                <p id="yieldStep2" style="color: var(--gray-text); font-size: 0.84rem; margin-bottom: 12px;"></p>
-                <div style="font-size: 0.78rem; color: #bdbdbd; line-height: 1.55;">
-                    &#128994; Above 3.5%: Good buy &nbsp;|&nbsp; &#128993; 2.5% &ndash; 3.5%: Fair valuation &nbsp;|&nbsp; &#128308; Below 2.5%: High price
-                </div>
+            <div>
+                <label for="propertyValueInput" style="display: block; font-size: 0.82rem; color: #dcdcdc; margin-bottom: 6px; font-weight: 600;">Total Property Value (&#8377;)</label>
+                <input type="number" id="propertyValueInput" placeholder="e.g. 13000000" min="0" step="any" style="width: 100%; padding: 11px 14px; border-radius: 5px; border: 1px solid rgba(255,255,255,0.18); background: #101010; color: #fff; font-family: 'Montserrat', sans-serif; font-size: 0.95rem;">
+            </div>
+
+            <button type="button" id="calcYieldBtn" class="btn-main" style="width: 100%; justify-content: center; border: none; cursor: pointer; margin-top: 4px;">
+                <i class="fa-solid fa-calculator"></i> Calculate
+            </button>
+        </div>
+
+        <div id="yieldResultBox" style="display: none; margin-top: 20px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.9rem;">
+            <div id="yieldBadge" style="font-weight: 700; font-size: 1rem; margin-bottom: 10px;"></div>
+            <p id="yieldMainLine" style="color: #fff; font-size: 1.15rem; font-weight: 700; margin-bottom: 8px;"></p>
+            <p id="yieldStep1" style="color: var(--gray-text); font-size: 0.84rem; margin-bottom: 4px;"></p>
+            <p id="yieldStep2" style="color: var(--gray-text); font-size: 0.84rem; margin-bottom: 12px;"></p>
+            <div style="font-size: 0.78rem; color: #bdbdbd; line-height: 1.55;">
+                &#11088; Above 6.0%: Commercial target &nbsp;|&nbsp; &#128994; Above 3.5%: Good buy &nbsp;|&nbsp; &#128993; 2.5% &ndash; 3.5%: Fair valuation &nbsp;|&nbsp; &#128308; Below 2.5%: High price
             </div>
         </div>
-    </section>
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/917021160832?text=Hi%20Shamine%20Global%20LLP%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-        <span>WhatsApp Us</span>
-    </a>
+    </div>
+</section>
 
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4>Shamine Global LLP</h4>
-                <p>Vasai-Virar's premier developer focused on structural excellence and high-yield joint ventures.</p>
-                <p><strong>LLPIN:</strong> ACO-0815</p>
-            </div>
-            <div class="footer-col">
-                <h4>Leadership &amp; Design</h4>
-                <p><strong>Samuel Gonsalves</strong> &ndash; Partner</p>
-                <p><strong>Suresh Gonsalves</strong> &ndash; Partner</p>
-                <p><strong>Saville Gonsalves</strong> &ndash; Lead Architect</p>
-            </div>
-            <div class="footer-col">
-                <h4>Contact Us</h4>
-                <a href="tel:+917021160832"><i class="fa-solid fa-phone"></i> +91 70211 60832</a>
-                <a href="https://wa.me/917021160832?text=Hi%20Shamine%20Global%20LLP%2C%20I%20visited%20shamineglobal.in%20and%20would%20like%20to%20connect." target="_blank"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
-                <p style="margin-top: 10px;"><i class="fa-solid fa-location-dot"></i> H No 2021, Kanodi Rd, Papdi,<br>Vasai Sandor, Maharashtra - 401201</p>
-            </div>
-        </div>
-        <div class="footer-bottom">&copy; 2026 Shamine Global LLP. All Rights Reserved.</div>
-    </footer>
+<script>
+    document.getElementById('calcYieldBtn').addEventListener('click', function () {
+        const monthlyRent = parseFloat(document.getElementById('monthlyRentInput').value);
+        const propertyValue = parseFloat(document.getElementById('propertyValueInput').value);
+        const resultBox = document.getElementById('yieldResultBox');
+        const badge = document.getElementById('yieldBadge');
+        const mainLine = document.getElementById('yieldMainLine');
+        const step1 = document.getElementById('yieldStep1');
+        const step2 = document.getElementById('yieldStep2');
 
-    <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const navLinks = document.getElementById('navLinks');
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => navLinks.classList.remove('active'));
-        });
-    </script><script>
-     document.getElementById('calcYieldBtn').addEventListener('click', function () {
-         const monthlyRent = parseFloat(document.getElementById('monthlyRentInput').value);
-         const propertyValue = parseFloat(document.getElementById('propertyValueInput').value);
-         const resultBox = document.getElementById('yieldResultBox');
-         const badge = document.getElementById('yieldBadge');
-         const mainLine = document.getElementById('yieldMainLine');
-         const step1 = document.getElementById('yieldStep1');
-         const step2 = document.getElementById('yieldStep2');
+        resultBox.style.display = 'block';
 
-         resultBox.style.display = 'block';
+        if (isNaN(monthlyRent) || monthlyRent <= 0 || isNaN(propertyValue) || propertyValue <= 0) {
+            badge.textContent = 'Please enter valid numbers for both Monthly Rent and Property Value.';
+            badge.style.color = '#e74c3c';
+            mainLine.textContent = '';
+            step1.textContent = '';
+            step2.textContent = '';
+            return;
+        }
 
-         if (isNaN(monthlyRent) || monthlyRent <= 0 || isNaN(propertyValue) || propertyValue <= 0) {
-             badge.textContent = 'Please enter valid numbers for both Monthly Rent and Property Value.';
-             badge.style.color = '#e74c3c';
-             mainLine.textContent = '';
-             step1.textContent = '';
-             step2.textContent = '';
-             return;
-         }
+        const annualRent = monthlyRent * 12;
+        const grossYield = (annualRent / propertyValue) * 100;
 
-         const annualRent = monthlyRent * 12;
-         const grossYield = (annualRent / propertyValue) * 100;
+        const fmtINR = (num) => '₹' + num.toLocaleString('en-IN', { maximumFractionDigits: 0 });
 
-         const fmtINR = (num) => '₹' + num.toLocaleString('en-IN', { maximumFractionDigits: 0 });
+        if (grossYield > 6.0) {
+            badge.textContent = '⭐ Above 6.0% — Strong Commercial Yield';
+            badge.style.color = '#D4AF37';
+        } else if (grossYield > 3.5) {
+            badge.textContent = '🟢 Good Buy (Above 3.5%)';
+            badge.style.color = '#2ecc71';
+        } else if (grossYield >= 2.5) {
+            badge.textContent = '🟡 Fair Price / Fair Valuation (2.5% – 3.5%)';
+            badge.style.color = '#f1c40f';
+        } else {
+            badge.textContent = '🔴 High Price (Below 2.5%)';
+            badge.style.color = '#e74c3c';
+        }
 
-         if (grossYield > 3.5) {
-             badge.textContent = '🟢 Good Buy (Above 3.5%)';
-             badge.style.color = '#2ecc71';
-         } else if (grossYield >= 2.5) {
-             badge.textContent = '🟡 Fair Price / Fair Valuation (2.5% – 3.5%)';
-             badge.style.color = '#f1c40f';
-         } else {
-             badge.textContent = '🔴 High Price (Below 2.5%)';
-             badge.style.color = '#e74c3c';
-         }
-
-         mainLine.textContent = 'Gross Rental Yield: ' + grossYield.toFixed(2) + '%';
-         step1.textContent = 'Annual Rent: ' + fmtINR(monthlyRent) + ' × 12 = ' + fmtINR(annualRent);
-         step2.textContent = 'Yield Calculation: (' + fmtINR(annualRent) + ' ÷ ' + fmtINR(propertyValue) + ') × 100 = ' + grossYield.toFixed(2) + '%';
-     });
- </script>
+        mainLine.textContent = 'Gross Rental Yield: ' + grossYield.toFixed(2) + '%';
+        step1.textContent = 'Annual Rent: ' + fmtINR(monthlyRent) + ' × 12 = ' + fmtINR(annualRent);
+        step2.textContent = 'Yield Calculation: (' + fmtINR(annualRent) + ' ÷ ' + fmtINR(propertyValue) + ') × 100 = ' + grossYield.toFixed(2) + '%';
+    });
+</script>
 </body>
 </html>
