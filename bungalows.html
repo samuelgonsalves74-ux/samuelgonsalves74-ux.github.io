@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shamine Global LLP | Premium Developers &amp; Builders in Vasai-Virar</title>
+    <meta name="description" content="Shamine Global LLP (LLPIN: ACO-0815) — Vasai-Virar's premier real estate developers, 60/40 landowner joint venture specialists, and heavy RCC civil contractors.">
+    <link rel="canonical" href="https://shamineglobal.in/">
+    <link rel="icon" type="image/jpeg" href="https://raw.githubusercontent.com/samuelgonsalves74-ux/samuelgonsalves74-ux.github.io/main/Image/Logo.JPG">
+
+    <!-- Open Graph / WhatsApp Link Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shamineglobal.in/">
+    <meta property="og:title" content="Shamine Global LLP | Premium Developers in Vasai-Virar">
+    <meta property="og:description" content="60/40 Landowner Joint Ventures, 5 BHK Luxury Villas at Sahara Residency, and Heavy RCC Civil Contracting across Vasai-Virar &amp; Palghar.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/samuelgonsalves74-ux/samuelgonsalves74-ux.github.io/main/Image/Logo.JPG">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-gold: #D4AF37;
+            --gold-hover: #e6c65c;
+            --dark-bg: #121212;
+            --darker-bg: #0a0a0a;
+            --card-bg: #181818;
+            --light-text: #f4f4f4;
+            --gray-text: #a8a8a8;
+            --whatsapp-green: #25D366;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Montserrat', sans-serif; background-color: var(--dark-bg); color: var(--light-text); line-height: 1.6; overflow-x: hidden; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 700; }
+        section { scroll-margin-top: 85px; }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 5%;
+            background-color: rgba(10, 10, 10, 0.96);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.22);
+        }
+        .brand-wrap {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .brand-wrap img {
+            height: 48px;
+            width: 48px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+        }
+        .logo {
+            font-size: 1.35rem;
+            color: var(--primary-gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .logo span {
+            color: var(--light-text);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            font-size: 0.78rem;
+            display: block;
+            letter-spacing: 1.5px;
+            margin-top: 2px;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        .nav-links a {
+            color: var(--light-text);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--primary-gold); }
+        .contact-btn-nav {
+            border: 1px solid var(--primary-gold);
+            color: var(--primary-gold) !important;
+            padding: 9px 20px;
+            border-radius: 4px;
+            transition: all 0.3s !important;
+        }
+        .contact-btn-nav:hover {
+            background-color: var(--primary-gold);
+            color: var(--darker-bg) !important;
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            color: var(--primary-gold);
+            font-size: 1.3rem;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 120px 20px 70px;
+            background: linear-gradient(rgba(10, 10, 10, 0.78), rgba(10, 10, 10, 0.92)),
+                        url('https://images.unsplash.com/photo-1541881451239-0158fb713a29?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        }
+        .hero-badge {
+            display: inline-block;
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            background: rgba(212, 175, 55, 0.08);
+            color: var(--primary-gold);
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 0.78rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+        .hero h1 {
+            font-size: 3.6rem;
+            color: var(--primary-gold);
+            margin-bottom: 20px;
+            letter-spacing: 1.5px;
+            line-height: 1.18;
+        }
+        .hero p {
+            font-size: 1.15rem;
+            max-width: 720px;
+            margin-bottom: 38px;
+            color: #dcdcdc;
+        }
+        .hero-cta-group {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .btn-main {
+            background-color: var(--primary-gold);
+            color: var(--darker-bg);
+            padding: 15px 34px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn-main:hover {
+            background-color: #fff;
+            box-shadow: 0 0 24px rgba(212, 175, 55, 0.45);
+            transform: translateY(-2px);
+        }
+        .btn-outline {
+            background-color: transparent;
+            color: var(--light-text);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 15px 34px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn-outline:hover {
+            border-color: var(--primary-gold);
+            color: var(--primary-gold);
+            transform: translateY(-2px);
+        }
+
+        /* Trust Strip */
+        .trust-strip {
+            background-color: #0e0e0e;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 36px 5%;
+        }
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .trust-item h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.7rem;
+            color: var(--primary-gold);
+            margin-bottom: 4px;
+        }
+        .trust-item p {
+            font-size: 0.85rem;
+            color: var(--gray-text);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Sections */
+        .section-padding { padding: 95px 5%; }
+        .bg-darker { background-color: var(--darker-bg); }
+        .section-title { font-size: 2.5rem; color: var(--primary-gold); margin-bottom: 14px; text-align: center; }
+        .section-subtitle { font-size: 1.05rem; color: var(--gray-text); margin-bottom: 55px; max-width: 780px; margin-left: auto; margin-right: auto; text-align: center; }
+
+        /* JV Grid */
+        .jv-grid { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; }
+        .jv-card {
+            background: var(--card-bg);
+            padding: 40px 32px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            flex: 1 1 300px;
+            max-width: 370px;
+            text-align: center;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .jv-card:hover { transform: translateY(-8px); border-color: var(--primary-gold); }
+        .jv-card i { font-size: 2.7rem; color: var(--primary-gold); margin-bottom: 20px; }
+        .jv-card h3 { font-size: 1.45rem; margin-bottom: 14px; color: #fff; }
+        .jv-card p { color: var(--gray-text); font-size: 0.94rem; }
+        .jv-cta-banner {
+            text-align: center;
+            margin-top: 48px;
+        }
+
+        /* Services Grid */
+        .expertise-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+        .service-box {
+            padding: 36px 30px;
+            background: linear-gradient(145deg, #191919, #121212);
+            border-left: 3px solid var(--primary-gold);
+            border-radius: 6px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+            transition: transform 0.3s;
+        }
+        .service-box:hover { transform: translateY(-5px); }
+        .service-box i {
+            font-size: 2rem;
+            color: var(--primary-gold);
+            margin-bottom: 18px;
+            display: block;
+        }
+        .service-box h4 { font-family: 'Montserrat', sans-serif; font-size: 1.2rem; margin-bottom: 12px; color: #fff; }
+        .service-box p { color: var(--gray-text); font-size: 0.92rem; }
+
+        /* Portfolio Highlight */
+        .portfolio-wrap { max-width: 1200px; margin: 0 auto; }
+        .project-highlight {
+            display: flex;
+            align-items: stretch;
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(212, 175, 55, 0.22);
+            margin-bottom: 42px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+        }
+        .project-highlight:nth-child(even) { flex-direction: row-reverse; }
+        .project-img { flex: 1 1 50%; min-height: 410px; background-size: cover; background-position: center; position: relative; }
+        .project-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .project-info { flex: 1 1 50%; padding: 48px; display: flex; flex-direction: column; justify-content: center; }
+        .project-info h3 { font-size: 2rem; color: var(--primary-gold); margin-bottom: 14px; line-height: 1.25; }
+        .project-info p { color: var(--gray-text); margin-bottom: 16px; font-size: 0.95rem; }
+
+        .tag { display: inline-block; padding: 5px 15px; border-radius: 20px; font-size: 0.78rem; margin-bottom: 16px; font-weight: 600; width: fit-content; letter-spacing: 0.5px; }
+        .tag-sale { background: rgba(46, 204, 113, 0.12); color: #2ecc71; border: 1px solid #2ecc71; }
+        .tag-done { background: rgba(212, 175, 55, 0.12); color: var(--primary-gold); border: 1px solid var(--primary-gold); }
+        .tag-upcoming { background: rgba(52, 152, 219, 0.12); color: #3498db; border: 1px solid #3498db; }
+
+        .project-actions {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 18px;
+            margin-top: 12px;
+        }
+        .btn-card {
+            background-color: var(--primary-gold);
+            color: var(--darker-bg);
+            padding: 11px 22px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+        .btn-card:hover { background-color: #fff; }
+        .text-link {
+            color: var(--primary-gold);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--primary-gold);
+            padding-bottom: 2px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .text-link:hover { color: #fff; border-color: #fff; }
+
+        .iframe-container { position: relative; width: 100%; height: 100%; min-height: 410px; }
+        .iframe-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+
+        /* Completed Bungalows Gateway Box */
+        .bungalows-gateway {
+            max-width: 1200px;
+            margin: 16px auto 0;
+            background: linear-gradient(135deg, #1b1810, #161616);
+            border: 1px solid rgba(212, 175, 55, 0.45);
+            border-radius: 10px;
+            padding: 36px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .bungalows-gateway h3 { color: var(--primary-gold); font-size: 1.7rem; margin-bottom: 8px; }
+        .bungalows-gateway p { color: #d5d5d5; max-width: 680px; font-size: 0.95rem; }
+
+        /* Footer */
+        footer { background-color: #050505; padding: 75px 5% 30px; border-top: 1px solid rgba(212, 175, 55, 0.18); }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto 48px; }
+        .footer-col h4 { color: var(--primary-gold); font-family: 'Montserrat', sans-serif; margin-bottom: 18px; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-col p, .footer-col a { color: var(--gray-text); text-decoration: none; display: block; margin-bottom: 10px; font-size: 0.93rem; transition: color 0.2s; }
+        .footer-col a:hover { color: var(--primary-gold); }
+        .footer-bottom { text-align: center; padding-top: 28px; border-top: 1px solid rgba(255, 255, 255, 0.06); color: #666; font-size: 0.82rem; }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background-color: var(--whatsapp-green);
+            color: #fff;
+            padding: 13px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.92rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 6px 22px rgba(37, 211, 102, 0.4);
+            z-index: 1100;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .whatsapp-float i { font-size: 1.4rem; }
+        .whatsapp-float:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 28px rgba(37, 211, 102, 0.55);
+        }
+
+        /* Responsive Mobile Styles */
+        @media (max-width: 860px) {
+            .menu-toggle { display: block; }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: rgba(10, 10, 10, 0.98);
+                flex-direction: column;
+                padding: 24px 5%;
+                gap: 20px;
+                border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+            }
+            .nav-links.active { display: flex; }
+            .logo { font-size: 1.1rem; }
+            .logo span { font-size: 0.7rem; }
+            .brand-wrap img { height: 42px; width: 42px; }
+            .hero h1 { font-size: 2.3rem; }
+            .hero p { font-size: 1rem; }
+            .section-title { font-size: 2rem; }
+            .project-highlight,
+            .project-highlight:nth-child(even) { flex-direction: column; }
+            .project-img, .iframe-container { min-height: 260px; width: 100%; }
+            .project-info { padding: 30px 24px; }
+            .bungalows-gateway { padding: 26px 22px; }
+            .whatsapp-float span { display: none; }
+            .whatsapp-float { padding: 15px; border-radius: 50%; bottom: 20px; right: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="brand-wrap">
+            <img src="https://raw.githubusercontent.com/samuelgonsalves74-ux/samuelgonsalves74-ux.github.io/main/Image/Logo.JPG" alt="Shamine Global LLP Logo">
+            <div class="logo">SHAMINE GLOBAL<span>LLP | Developers &amp; Builders</span></div>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="nav-links" id="navLinks">
+            <a href="#jv">Joint Ventures</a>
+            <a href="#expertise">Services</a>
+            <a href="#portfolio">Projects</a>
+            <a href="bungalows.html">Completed Bungalows</a>
+            <a href="tel:+917021160832" class="contact-btn-nav"><i class="fa-solid fa-phone"></i> Call Now</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <span class="hero-badge">Vasai-Virar &amp; Palghar &bull; LLPIN: ACO-0815</span>
+        <h1>Transforming the Skyline<br>of Vasai-Virar</h1>
+        <p>Premium real estate developers and heavy civil contractors specializing in multi-story residential structures, luxury villas, and 60/40 landowner joint ventures.</p>
+        <div class="hero-cta-group">
+            <a href="https://wa.me/917021160832?text=Hi%20Shamine%20Global%20LLP%2C%20I%20would%20like%20to%20discuss%20a%20project%20or%2060%2F40%20Joint%20Venture." target="_blank" class="btn-main">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
+            </a>
+            <a href="#portfolio" class="btn-outline">
+                Explore Projects <i class="fa-solid fa-arrow-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <div class="trust-strip">
+        <div class="trust-grid">
+            <div class="trust-item">
+                <h3>ACO-0815</h3>
+                <p>Registered LLP</p>
+            </div>
+            <div class="trust-item">
+                <h3>60 / 40</h3>
+                <p>100% Funded JV Model</p>
+            </div>
+            <div class="trust-item">
+                <h3>10 Acres</h3>
+                <p>Sahara Residency Township</p>
+            </div>
+            <div class="trust-item">
+                <h3>20,651+ Sq. Ft.</h3>
+                <p>Upcoming Redevelopment</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="jv" class="section-padding bg-darker">
+        <h2 class="section-title">The 60/40 Landowner Advantage</h2>
+        <p class="section-subtitle">Turn your empty plot (minimum 5 gunthas) into a multi-story generational asset. We handle the heavy lifting; you reap the rewards.</p>
+        <div class="jv-grid">
+            <div class="jv-card">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <h3>1. You Provide the Land</h3>
+                <p>If you own a clear-title plot of 5 gunthas or more in the Vasai, Virar, or Palghar region, you bring the canvas.</p>
+            </div>
+            <div class="jv-card">
+                <i class="fa-solid fa-helmet-safety"></i>
+                <h3>2. We Build It (100% Cost)</h3>
+                <p>Shamine Global covers 100% of capital, architectural planning, legal approvals, material, and heavy RCC construction.</p>
+            </div>
+            <div class="jv-card">
+                <i class="fa-solid fa-building-user"></i>
+                <h3>3. You Keep 40%</h3>
+                <p>Upon completion, you receive 40% of the premium finished building to live in, rent out, or sell for maximum ROI.</p>
+            </div>
+        </div>
+        <div class="jv-cta-banner">
+            <a href="https://wa.me/917021160832?text=Hi%20Shamine%20Global%2C%20I%20own%20a%20plot%20and%20would%20like%20to%20discuss%20a%2060%2F40%20Joint%20Venture." target="_blank" class="btn-main">
+                <i class="fa-brands fa-whatsapp"></i> Discuss Your Plot on WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <section id="expertise" class="section-padding">
+        <h2 class="section-title">Core Expertise</h2>
+        <p class="section-subtitle">Engineered for structural integrity. Designed for luxury.</p>
+        <div class="expertise-grid">
+            <div class="service-box">
+                <i class="fa-solid fa-building"></i>
+                <h4>Multi-Story Residential</h4>
+                <p>End-to-end development of premium apartments designed to elevate the standard of living and generate high rental yields.</p>
+            </div>
+            <div class="service-box">
+                <i class="fa-solid fa-trowel-bricks"></i>
+                <h4>Heavy RCC &amp; Civil Contracting</h4>
+                <p>Executing unbreakable foundations, complex frameworks, and industrial shell construction across Palghar district.</p>
+            </div>
+            <div class="service-box">
+                <i class="fa-solid fa-house-chimney"></i>
+                <h4>Turnkey Bungalows &amp; Villas</h4>
+                <p>Lock-and-key bungalow construction and luxury villa execution across Vasai-Virar—with 6+ completed bungalows delivered.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section-padding bg-darker">
+        <h2 class="section-title">Proven Execution</h2>
+        <p class="section-subtitle">We don't just draft blueprints; we deliver landmarks.</p>
+
+        <div class="portfolio-wrap">
+            <!-- Sahara Residency Villas -->
+            <div class="project-highlight">
+                <div class="project-img">
+                    <div class="iframe-container">
+                        <iframe src="https://www.youtube.com/embed/D7y5_px0ZHI" title="Sahara Residency Walkthrough" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <span class="tag tag-sale">5 BHK Villas Available for Sale</span>
+                    <h3>Sahara Residency</h3>
+                    <p>A sprawling 10-acre premium township in Vasai offering customizable 5 BHK luxury villas. Featuring spacious layouts, lavish marble flooring, designer ceilings, and personal borewells for 24-hour natural water supply.</p>
+                    <p>Ready for immediate possession. Choose from modern minimalist, vintage, or contemporary glass facade designs.</p>
+                    <div class="project-actions">
+                        <a href="https://wa.me/917021160832?text=Hi%20Shamine%20Global%2C%20I%20am%20interested%20in%20the%205%20BHK%20Luxury%20Villas%20at%20Sahara%20Residency%2C%20Vasai.%20Please%20share%20pricing%20and%20site%20visit%20details." target="_blank" class="btn-card">
+                            <i class="fa-brands fa-whatsapp"></i> Enquire Now
+                        </a>
+                        <a href="https://maps.app.goo.gl/tfgPcJnVfqe1Fx3k8" target="_blank" class="text-link">
+                            View on Google Maps <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sahara Regency - Hathi Mohalla JV -->
+            <div class="project-highlight">
+                <div class="project-img">
+                    <img src="https://raw.githubusercontent.com/samuelgonsalves74-ux/samuelgonsalves74-ux.github.io/main/Image/Sahara%20regency.png" alt="Sahara Regency Hathi Mohalla Joint Venture Project">
+                </div>
+                <div class="project-info">
+                    <span class="tag tag-done">Completed &amp; Handed Over: 2023</span>
+                    <h3>Sahara Regency &ndash; Hathi Mohalla</h3>
+                    <p>Executed as a Joint Venture project and handed over to the society in 2023. The development spans two wings comprising 45 residential flats and 4 commercial shops.</p>
+                    <p>Wing 1 features Ground + 6 floors with 24 flats, while Wing 2 features Ground + 7 floors with 21 flats and 4 ground-level shops.</p>
+                    <div class="project-actions">
+                        <a href="https://wa.me/917021160832?text=Hi%20Shamine%20Global%2C%20I%20saw%20your%20completed%20Sahara%20Regency%20project%20at%20Hathi%20Mohalla%20and%20would%20like%20to%20discuss%20a%20Joint%20Venture." target="_blank" class="btn-card">
+                            <i class="fa-brands fa-whatsapp"></i> Start a 60/40 JV
+                        </a>
+                        <a href="https://maps.app.goo.gl/Y1kthjbMewmDYzMr7" target="_blank" class="text-link">
+                            View on Google Maps <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mulgow JV -->
+            <div class="project-highlight">
+                <div class="project-img">
+                    <img src="https://raw.githubusercontent.com/samuelgonsalves74-ux/samuelgonsalves74-ux.github.io/main/Image/sahara-residency-villa.jpg" alt="Mulgow 60/40 JV Development">
+                </div>
+                <div class="project-info">
+                    <span class="tag tag-done">Completed: Feb 2026</span>
+                    <h3>Mulgow 60/40 JV Development</h3>
+                    <p>A shining example of our Joint Venture capability. We successfully executed this Ground + 6 multi-story residential building under our 60/40 landowner model.</p>
+                    <p>Spanning 12,000 sq. ft. of heavy structural development, this project was delivered seamlessly from foundation to finish.</p>
+                    <div class="project-actions">
+                        <a href="https://wa.me/917021160832?text=Hi%20Shamine%20Global%2C%20I%20saw%20your%20Mulgow%2060%2F40%20JV%20project%20and%20would%20like%20to%20discuss%20a%20Joint%20Venture%20for%20my%20land." target="_blank" class="btn-card">
+                            <i class="fa-brands fa-whatsapp"></i> Start a 60/40 JV
+                        </a>
+                        <a href="https://maps.app.goo.gl/qJeVSbgRU7oZYJBE6" target="_blank" class="text-link">
+                            View on Google Maps <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Haloli Commercial -->
+            <div class="project-highlight">
+                <div class="project-img" style="background-image: url('https://raw.githubusercontent.com/samuelgonsalves74-ux/samuelgonsalves74-ux.github.io/main/Image/Haloli%20overview.png');"></div>
+                <div class="project-info">
+                    <span class="tag tag-done">Commercial Execution</span>
+                    <h3>Chhatrapati Shivaji Maharaj Vyapar Sankul</h3>
+                    <p>Showcasing our capacity for large-scale industrial and commercial contracting. This massive trade center project in Haloli is handled entirely by Shamine Global LLP.</p>
+                    <p>From complex framework engineering to complete commercial execution, we deliver unbreakable structures.</p>
+                    <div class="project-actions">
+                        <a href="https://wa.me/917021160832?text=Hi%20Shamine%20Global%2C%20I%20would%20like%20to%20discuss%20a%20commercial%20or%20industrial%20construction%20contract." target="_blank" class="btn-card">
+                            <i class="fa-brands fa-whatsapp"></i> Request Contract Quote
+                        </a>
+                        <a href="https://maps.app.goo.gl/XjuEMbgqDNnutAj37" target="_blank" class="text-link">
+                            View on Google Maps <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vijayshree Building -->
+            <div class="project-highlight">
+                <div class="project-img">
+                    <img src="https://raw.githubusercontent.com/samuelgonsalves74-ux/samuelgonsalves74-ux.github.io/main/Image/vijayshree.png" alt="Vijayshree Building Upcoming Redevelopment">
+                </div>
+                <div class="project-info">
+                    <span class="tag tag-upcoming">Upcoming Redevelopment</span>
+                    <h3>Vijayshree Building</h3>
+                    <p>An upcoming 7-story residential redevelopment project (C.T.S.NO. 3284) that highlights our massive scaling capabilities.</p>
+                    <p>Featuring a total project execution of over 20,651 sq. ft. of saleable area, including premium 7th-floor layouts with private attached terraces.</p>
+                    <div class="project-actions">
+                        <a href="https://wa.me/917021160832?text=Hi%20Shamine%20Global%2C%20I%20am%20interested%20in%20the%20upcoming%20Vijayshree%20Building%20redevelopment%20project.%20Please%20share%20details." target="_blank" class="btn-card">
+                            <i class="fa-brands fa-whatsapp"></i> Request Floor Plans
+                        </a>
+                        <a href="https://maps.app.goo.gl/CUBLjSKeJHsGMdMEA" target="_blank" class="text-link">
+                            View on Google Maps <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Completed Bungalows Gateway -->
+            <div class="bungalows-gateway">
+                <div>
+                    <span class="tag tag-done">6+ Completed Lock &amp; Key Homes</span>
+                    <h3>Completed Bungalows &amp; Villas</h3>
+                    <p>Looking for private turnkey bungalow construction or ongoing villas? View our dedicated list of completed lock-and-key bungalows across Vasai-Virar.</p>
+                </div>
+                <a href="bungalows.html" class="btn-main">
+                    Completed Bungalows <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Shamine Global LLP</h4>
+                <p>Vasai-Virar's premier developer focused on structural excellence and high-yield joint ventures.</p>
+                <p><strong>LLPIN:</strong> ACO-0815</p>
+            </div>
+            <div class="footer-col">
+                <h4>Leadership &amp; Design</h4>
+                <p><strong>Samuel Gonsalves</strong> &ndash; Partner</p>
+                <p><strong>Suresh Gonsalves</strong> &ndash; Partner</p>
+                <p><strong>Saville Gonsalves</strong> &ndash; Lead Architect</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <a href="tel:+917021160832"><i class="fa-solid fa-phone"></i> +91 70211 60832</a>
+                <a href="https://wa.me/917021160832?text=Hi%20Shamine%20Global%20LLP%2C%20I%20visited%20shamineglobal.in%20and%20would%20like%20to%20connect." target="_blank"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+                <p style="margin-top: 10px;"><i class="fa-solid fa-location-dot"></i> H No 2021, Kanodi Rd, Papdi,<br>Vasai Sandor, Maharashtra - 401201</p>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 Shamine Global LLP. All Rights Reserved.</div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/917021160832?text=Hi%20Shamine%20Global%20LLP%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>WhatsApp Us</span>
+    </a>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('active'));
+        });
+    </script>
+</body>
+</html>
